@@ -1,0 +1,790 @@
+body {
+    margin: 0;
+    background-color: #f4f4f4;
+    font-family: arial;
+}
+
+p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+header {
+    position: fixed;
+    background-color: #ffffff;
+    right: 0;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    box-shadow: 0px -5px 15px 0px rgba(0, 0, 0, 0.5);
+    z-index: 50;
+}
+
+header h1 {
+    margin: 0px;
+    font-size: 4rem;
+    font-family: fantasy;
+    color: orange;
+}
+
+nav li {
+    position: relative;
+    float: left;
+    list-style-type: none;
+}
+
+nav li:hover>ul {
+    display: initial;
+}
+
+nav a {
+    margin: 15px;
+    font-size: 1.2rem;
+    display: block;
+    transition: .1s;
+}
+
+nav a:hover {
+    transform: scale(1.1);
+}
+
+.vyp {
+    position: absolute;
+    background-color: white;
+    display: none;
+}
+
+.head_cont {
+    margin-top: 10px;
+}
+
+.nomer {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    white-space: nowrap;
+}
+
+.nomer img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+#head_adres {
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+#knop {
+    display: none;
+    appearance: none;
+    border: 0;
+    border-radius: 5px;
+    background: orange;
+    color: #fff;
+    padding: 8px 16px;
+    font-size: 16px;
+}
+
+.disp {
+    display: none;
+}
+
+.navmenu {
+    position: absolute;
+    justify-content: space-around;
+    background-color: white;
+    right: 0;
+    top: 90%;
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 100;
+}
+
+.navmenu li {
+    list-style-type: none;
+    font-size: 2rem;
+    padding: 10px;
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.navmenu img {
+    width: 25px;
+    margin-right: 10px;
+}
+
+footer {
+    text-align: center;
+    background-color: #000000;
+}
+
+footer section p {
+    padding: 5px 5px 0px 5px;
+    color: white;
+}
+
+.foot1 {
+    display: flex;
+    justify-content: space-around;
+}
+
+/*Главная*/
+
+.bg1 {
+    background-image: url('bg.jpeg');
+    height: 100vh;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.RSPKY {
+    font-size: clamp(2rem, 8vw, 5rem);
+}
+
+.hi {
+    display: flex;
+    position: absolute;
+    font-size: clamp(1rem, 7vw, 4rem);
+    color: white;
+    max-width: 90%;
+    bottom: 10%;
+    left: 5%;
+}
+
+.vozr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.vozr_kart {
+    display: flex;
+    width: 500px;
+    height: 500px;
+    margin: 50px;
+    position: relative;
+}
+
+.vozr_kart img {
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.vozr_kart p {
+    font-weight: 1000;
+    font-size: 5rem;
+    position: absolute;
+    left: 38%;
+    white-space: nowrap;
+    color: orange;
+}
+
+.vozr_text {
+    width: 30%;
+}
+
+.vozr_text p,
+.vozr_text ul {
+    margin: 20px 0px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.vozr_text ul {
+    padding-left: 40px;
+}
+
+.bg2 {
+    background-image: url('bg.jpeg');
+    height: 300px;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.remkol {
+    position: absolute;
+    color: white;
+    font-size: 13rem;
+    font-weight: bold;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.rem {
+    position: absolute;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%);
+    white-space: nowrap;
+}
+
+.zagl {
+    text-align: center;
+    margin: 30px;
+    font-size: 3rem;
+}
+
+.kach ul {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+
+.kach li {
+    position: relative;
+    min-width: 400px;
+    padding: 20px;
+    list-style-type: none;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.contetn {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100%;
+    visibility: hidden;
+    font-size: 1rem;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.kach li:hover .contetn {
+    visibility: visible;
+}
+
+.kach img {
+    width: 100px;
+    height: 100px;
+}
+
+/*Галерея*/
+
+.gal {
+    position: relative;
+    background: linear-gradient(white, orange);
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.shadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 50%;
+}
+
+.bt {
+    border: 0;
+    padding: 0;
+    background: none;
+}
+
+.gal img {
+    height: 20vw;
+    margin: 10px;
+    border: 10px solid #ffffff;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.gal .big {
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 80vh;
+    transition: 0.5s;
+}
+
+/*Отзывы*/
+
+.rewiews {
+    position: relative;
+    margin-top: 99px;
+    width: 100%;
+    height: 80vh;
+    background-image: url(rew.jpeg);
+    background-size: cover;
+    overflow: hidden;
+}
+
+.rew_title {
+    position: absolute;
+    left: 20%;
+    top: 0;
+    white-space: nowrap;
+    color: black;
+    font-weight: bolder;
+}
+
+.switch input {
+    display: none;
+}
+
+.controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.controls label {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: orange;
+    font-weight: bold;
+    border: 2px solid orange;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.switch input:nth-child(1):checked~.controls label:nth-child(1),
+.switch input:nth-child(2):checked~.controls label:nth-child(2),
+.switch input:nth-child(3):checked~.controls label:nth-child(3),
+.switch input:nth-child(4):checked~.controls label:nth-child(4),
+.switch input:nth-child(5):checked~.controls label:nth-child(5) {
+    background-color: orange;
+    color: white;
+    border-color: white;
+}
+
+.wrapper {
+    position: relative;
+    width: 430%;
+    height: 80vh;
+    display: flex;
+    justify-content: space-evenly;
+    transition: 0.5s;
+    align-items: center;
+}
+
+.wrapper .box {
+    position: relative;
+    width: 14.9%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background: linear-gradient(white, 95%, orange);
+    border: 0.7vh solid orange;
+    border-radius: 5px;
+}
+
+.box h1 {
+    position: absolute;
+    left: 15%;
+    top: 10%;
+}
+
+.box p {
+    padding: 5%;
+    font-size: 120%;
+    font-weight: bold;
+}
+
+.switch input:nth-child(1):checked~.wrapper {
+    left: 0;
+}
+
+.switch input:nth-child(2):checked~.wrapper {
+    left: -82.5%;
+}
+
+.switch input:nth-child(3):checked~.wrapper {
+    left: -165%;
+}
+
+.switch input:nth-child(4):checked~.wrapper {
+    left: -247.5%;
+}
+
+.switch input:nth-child(5):checked~.wrapper {
+    left: -330%;
+}
+
+/*Контакты*/
+
+.contactpage {
+    margin-top: 99px;
+    position: relative;
+}
+
+#onMap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25%;
+    height: 600px;
+    background: linear-gradient(orange, 95%, #f4f4f4);
+}
+
+#onMap img {
+    width: 75%;
+    margin-left: 14%;
+}
+
+#onMap h2 {
+    text-align: center;
+}
+
+#contfoto {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#contfoto p {
+    padding: 5% 14%;
+}
+
+#contadressa {
+    text-align: center;
+}
+
+#contadressa #adr {
+    display: flex;
+    font-weight: bold;
+}
+
+#contadressa .objadr {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 33%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 3% 2% 3%;
+}
+
+/*Офис*/
+
+.opisanie {
+    margin-top: 99px;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+}
+
+.opisanie img {
+    width: 600px;
+    margin-left: 50px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.opisanie p {
+    font-size: 35px;
+    font-weight: bold;
+    text-align: justify;
+}
+
+.deyat {
+    background-color: #fff;
+    width: 62%;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    margin: 0px auto 50px auto;
+}
+
+.deyat h2 {
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 0px 10%;
+}
+
+.deyat img {
+    margin-left: 50%;
+    transform: translate(-50%);
+}
+
+.deyat p {
+    margin: 15px 10%;
+    font-weight: bold;
+    text-align: justify;
+}
+
+.hold {
+    padding: 5%;
+    background: linear-gradient(#f4f4f4, 10%, orange, 90%, #f4f4f4);
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.litc {
+    background-color: #fff;
+    width: 62%;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    margin: 50px auto 50px auto;
+    position: relative;
+}
+
+.litc h2 {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.litc p {
+    margin: 15px 10%;
+    text-align: justify;
+}
+
+.litc img {
+    position: absolute;
+}
+
+#foto3 {
+    width: 60px;
+    left: 50%;
+    top: 60px;
+    transform: translate(-50%);
+}
+
+/*Филиалы*/
+
+.filials h2 {
+    margin: 150px 100px 0px 100px;
+    font-size: 30px;
+    text-align: justify;
+}
+
+.filials h3 {
+    text-align: center;
+    background-color: orange;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    font-size: 40px;
+    padding: 15px;
+}
+
+.blocks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 50px 0px;
+}
+
+.block {
+    width: 35%;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    padding: 20px 50px;
+    text-align: justify;
+}
+
+.block ul {
+    list-style-type: none;
+}
+
+.block p {
+    margin: 10px 0px;
+}
+
+@media screen and (width < 1100px) {
+
+    /*Главная*/
+
+    .head_cont {
+        display: none;
+    }
+
+    .bg1 {
+        height: 90vh;
+    }
+
+    nav {
+        display: none;
+    }
+
+    #knop {
+        display: initial;
+    }
+
+    .vozr_text {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .vozr_kart {
+        width: auto;
+        height: auto;
+        position: static;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .vozr_kart img {
+        width: 30%;
+    }
+
+    .vozr_kart p {
+        position: static;
+        order: 2;
+        font-size: clamp(1rem, 10vw, 400px);
+        padding-left: 20px;
+    }
+
+    /*Галлерея*/
+
+    .gal img {
+        width: 90%;
+        height: auto;
+    }
+
+    .gal img:focus {
+        height: auto;
+    }
+
+    /*Отзывы*/
+
+    .box h1 {
+        left: 50%;
+        top: 0%;
+        transform: translate(-50%);
+        font-size: 20px;
+    }
+
+    .box p {
+        font-weight: normal;
+    }
+
+    /*Офис*/
+
+    .deyat {
+        width: 80%;
+    }
+
+    .opisanie {
+        flex-wrap: wrap;
+    }
+
+    .opisanie p {
+        font-size: 20px;
+        margin: -20px;
+    }
+
+    .opisanie img {
+        margin: 50px auto 0px;
+        width: 100%;
+        max-width: 740px;
+    }
+
+    .litc {
+        width: 80%;
+    }
+}
+
+@media screen and (width < 700px) {
+
+    /*Главная*/
+
+    .bg2 {
+        height: 150px;
+    }
+
+    .remkol {
+        font-size: 5rem;
+    }
+
+    .rem {
+        font-size: 2rem;
+        top: 60%;
+    }
+
+    .kach li {
+        min-width: 0;
+        margin: auto;
+    }
+
+    /*Отзывы*/
+
+    .box p {
+        padding: 5%;
+        font-size: 80%;
+    }
+
+    .wrapper {
+        padding-top: 50px;
+    }
+
+    .rew_title {
+        text-align: center;
+        left: 0%;
+        white-space: wrap;
+    }
+
+    .rewiews {
+        height: 90vh;
+    }
+
+    /*Контакты*/
+
+    #onMap {
+        position: absolute;
+        top: 300px;
+        width: 100%;
+        height: 300px;
+    }
+
+    #onMap img {
+        width: 130px;
+        margin-left: 5%;
+    }
+
+    #contfoto {
+        flex-wrap: nowrap;
+    }
+
+    #contfoto p {
+        padding: 15% 2%;
+    }
+
+    #adr {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #contadressa .objadr {
+        width: 80%;
+    }
+
+    /*Филиалы*/
+
+    .filials h2 {
+        margin: 150px 5% 0px 5%;
+        font-size: 20px;
+    }
+
+    .block {
+        width: 70%;
+        padding: 10px 20px;
+        margin-bottom: 20px;
+    }
+}
